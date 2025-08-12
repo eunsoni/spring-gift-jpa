@@ -32,6 +32,7 @@ public class Product {
 
 
     public Product(String name, int price, String imageUrl) {
+        checkName(name);
         this.name = name;
         this.price = price;
         this.imageUrl = imageUrl;
@@ -54,7 +55,8 @@ public class Product {
     }
 
 
-    public void edit(String email, int price, String imageUrl) {
+    public void edit(String name, int price, String imageUrl) {
+        checkName(name);
         this.name = name;
         this.price = price;
         this.imageUrl = imageUrl;

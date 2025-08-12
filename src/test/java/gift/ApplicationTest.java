@@ -1,10 +1,9 @@
 package gift;
 
-import org.apache.catalina.core.ApplicationContext;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.context.ApplicationContext;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,10 +14,7 @@ public class ApplicationTest {
     private ApplicationContext context;
 
     @Test
-    void test1(){
-        System.out.println(this);
-        System.out.println(context);
+    void contextLoads() {
         assertThat(context).isNotNull();
     }
-
 }

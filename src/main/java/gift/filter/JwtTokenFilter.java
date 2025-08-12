@@ -1,7 +1,6 @@
 package gift.filter;
 
 import gift.util.JwtTokenProvider;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import jakarta.servlet.*;
@@ -15,7 +14,6 @@ public class JwtTokenFilter implements Filter {
 
     private final JwtTokenProvider jwtTokenProvider;
 
-    @Autowired
     public JwtTokenFilter(JwtTokenProvider jwtTokenProvider) {
         this.jwtTokenProvider = jwtTokenProvider;
     }
